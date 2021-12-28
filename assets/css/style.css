@@ -1,0 +1,11 @@
+.header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 75px;
+    background-image: url(https://static.sciencelearn.org.nz/images/images/000/003/176/embed/FIR_ITV_RuralFireRisk_Weather_CloudySky_123RF_901534.jpg?1522314128);
+    text-align: center;
+    height: 100px;
+    border-bottom: black;
+    border-style: solid;
+    border-width: 7px;
+    margin: 7px;
+}
