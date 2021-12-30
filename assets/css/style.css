@@ -12,3 +12,22 @@
     border-width: 7px;
     margin: 7px;
 }
+
+.main {
+    background-color: lightyellow;
+}
+
+#weatherContent {
+    display: none;
+}
+
+#searchResults {
+    background-color: lightyellow;
+}
+
+#cityDetail,
+#uvIndexColor,
+li {
+    color: black;
+    background-color: lightyellow;
+}
