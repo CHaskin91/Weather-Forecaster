@@ -18,7 +18,7 @@ function currentCondition(city) {
         $("#cityDetail").empty();
 
         var iconCode = cityWeatherResponse.weather[0].icon;
-        var iconURL = 'https://openweathermap.org/img/w/${iconCode}.png';
+        var iconURL = `https://openweathermap.org/img/w/${iconCode}.png`;
     
         var currentCity = $(`
             <h2 id="currentCity">
@@ -70,7 +70,7 @@ function futureCondition(lat, lon) {
         console.log(futureResponse);
         $("#fiveDay").empty();
 
-        
+
     })
 }
 
