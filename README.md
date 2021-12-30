@@ -5,6 +5,11 @@ Search a City to see the current weather, and the upcoming 5 day forecast.  Site
 * GitHub Repo [https://github.com/CHaskin91/Weather-Radar]
 * Live URL []
 
+## Installation
+1. Download or clone the repository.
+2. Open the main page (index.html) in your browser to view.
+3. Use a text editor to view all coding.  Visual Studio Code is recommended.
+
 ## Resources
 * One Call API - Weather Data [https://openweathermap.org/api/one-call-api]
 * Font Awesome [https://fontawesome.com/]

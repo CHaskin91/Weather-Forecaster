@@ -22,7 +22,7 @@ function currentCondition(city) {
     
         var currentCity = $(`
             <h2 id="currentCity">
-                ${cityweatherResponse.name} ${today} <img src="${iconURL}" alt="${cityWeatherResponse.weather[0].description}" />
+                ${cityWeatherResponse.name} ${today} <img src="${iconURL}" alt="${cityWeatherResponse.weather[0].description}" />
                 </h2>
                 <p>Temperature: ${cityWeatherResponse.main.temp} °F</p>
                 <p>Humidity: ${cityWeatherResponse.main.humdity}\%</p>
@@ -32,8 +32,29 @@ function currentCondition(city) {
         $("#cityDetail").append(currentCity);
 
         // UV Index
+        var lat = cityWeatherResponse.coord.lat;
+        var lon = cityWeatherResponse.coord.lon;
+        var uviQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
-    })
+        $.ajax({
+            url: uviQueryURL,
+            method: "GET"
+        }).then(function(uviResponse) {
+            console.log(uviResponse);
+
+            var uvIndex = uviResponse.value;
+            var uvIndexP = $(`
+                <p>UV Index:
+                    <span id="uvIndexColor" class="px-2 py-2 rounded">${uvIndex}</span>
+                </p>
+            `);
+
+            $("#cityDetail").append(uvIndexP);
+
+            futureCondition(lat, lon);
+
+            // UV Index Color Scale
+        })    })
 }
 
 // Event Listener for Search Button
