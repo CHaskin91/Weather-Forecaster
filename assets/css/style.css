@@ -13,21 +13,23 @@
     margin: 7px;
 }
 
-.main {
-    background-color: lightyellow;
-}
-
 #weatherContent {
     display: none;
-}
-
-#searchResults {
-    background-color: lightyellow;
 }
 
 #cityDetail,
 #uvIndexColor,
 li {
     color: black;
-    background-color: lightyellow;
+    background-color: lightyellow!important;
+}
+
+#searchResults,
+#cityDetail,
+.card {
+    background-color: lightyellow!important;
+}
+
+#searchResults {
+    height: 100vh;
 }

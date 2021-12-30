@@ -57,6 +57,23 @@ function currentCondition(city) {
         })    })
 }
 
+//Function for Future Condition
+function futureCondition(lat, lon) {
+
+    // 5 Day Forecast
+    var futureURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${apiKey}`;
+
+    $.ajax({
+        url: futureURL,
+        method: "GET"
+    }).then(function(futureResponse) {
+        console.log(futureResponse);
+        $("#fiveDay").empty();
+
+        
+    })
+}
+
 // Event Listener for Search Button
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();
