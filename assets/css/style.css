@@ -28,9 +28,24 @@ li {
 #searchResults,
 #cityDetail,
 .card {
+    border: 1px solid black!important;
+    color: black;
     background-color: lightyellow!important;
 }
 
 #searchResults {
     height: 100vh;
+}
+
+#fiveDay .card {
+    border: 1px solid black!important;
+}
+
+#searchHistory li {
+    background-color: lightyellow;
+    color: black!important;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
 }
