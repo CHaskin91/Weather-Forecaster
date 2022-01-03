@@ -119,7 +119,7 @@ $("#searchBtn").on("click", function(event) {
     currentCondition(city);
     if (!searchHistoryList.includes(city)) {
         searchHistoryList.push(city);
-        var searchedCity = $('<li class="list-group-item">${city}</li>');
+        var searchedCity = $(`<li class="list-group-item">${city}</li>`);
         $("#searchHistory").append(searchedCity);
     };
 
