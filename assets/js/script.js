@@ -1,4 +1,3 @@
-// API Key -  64e2cba491f5c7c9e42caa6e15bbc619
 // Global Variables
 var apiKey = "64e2cba491f5c7c9e42caa6e15bbc619";
 var today = moment().format('L');
@@ -54,7 +53,19 @@ function currentCondition(city) {
             futureCondition(lat, lon);
 
             // UV Index Color Scale
-        })    })
+            if (uvIndex >= 0 && uvIndex <= 2) {
+                $("#uvIndexColor").css("background-color", "#3EA72D").css("color", "white");
+            } else if (uvIndex >= 3 && uvIndex <= 5) {
+                $("#uvIndexColor").css("background-color", "#FFF300");
+            } else if (uvIndex >= 6 && uvIndex <= 7) {
+                $("#uvIndexColor").css("background-color", "#F18B00");
+            } else if (uvIndex >= 8 && uvIndex <= 10) {
+                $("#uvIndexColor").css("background-color", "#E53210").css("color", "white");
+            } else {
+                $("#uvIndexColor").css("background-color", "#B567A4").css("color", "white");
+            };
+        });    
+    });
 }
 
 //Function for Future Condition
@@ -114,4 +125,22 @@ $("#searchBtn").on("click", function(event) {
 
     localStorage.setItem("city", JSON.stringify(searchHistoryList));
     console.log(searchHistoryList);
+});
+
+// Search History
+$(document).on("click", ".list-group-item", function() {
+    var listCity = $(this).text();
+    currentCondition(listCity);
+});
+
+// Store past searches
+$(document).ready(function() {
+    var searchHistoryArr = JSON.parse(localStorage.getItem("city"));
+
+    if (searchHistoryArr !== null) {
+        var lastSearchedIndex = searchHistoryArr.length - 1;
+        var lastSearchedCity = searchHistoryArr[lastSearchedIndex];
+        currentCondition(lastSearchedCity);
+        console.log(`Last searched City: ${lastSearchedCity}`);
+    }
 });
