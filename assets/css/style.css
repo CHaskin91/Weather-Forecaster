@@ -34,7 +34,7 @@ li {
 }
 
 #searchResults {
-    height: 100vh;
+    height: 100VH;
 }
 
 #fiveDay .card {
@@ -44,6 +44,10 @@ li {
 #searchHistory li {
     background-color: lightyellow;
     color: black!important;
+}
+
+h5 {
+    color: black;
 }
 
 body {
