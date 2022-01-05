@@ -1,4 +1,4 @@
-# Weather-Radar
+# Weather-Forecaster
 Search a City to see the current weather, and the upcoming 5 day forecast.  Site uses localStorage to store your recent searches.  Powered by dynamically updated HTML, CSS, and Third-Party APIs
 
 ## Links
