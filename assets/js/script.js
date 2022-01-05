@@ -54,15 +54,15 @@ function currentCondition(city) {
 
             // UV Index Color Scale
             if (uvIndex >= 0 && uvIndex <= 2) {
-                $("#uvIndexColor").css("background-color", "#3EA72D").css("color", "white");
+                $("#uvIndexColor").css("background-color", "#3EA72D").css("color", "black");
             } else if (uvIndex >= 3 && uvIndex <= 5) {
                 $("#uvIndexColor").css("background-color", "#FFF300");
             } else if (uvIndex >= 6 && uvIndex <= 7) {
                 $("#uvIndexColor").css("background-color", "#F18B00");
             } else if (uvIndex >= 8 && uvIndex <= 10) {
-                $("#uvIndexColor").css("background-color", "#E53210").css("color", "white");
+                $("#uvIndexColor").css("background-color", "#E53210").css("color", "black");
             } else {
-                $("#uvIndexColor").css("background-color", "#B567A4").css("color", "white");
+                $("#uvIndexColor").css("background-color", "#B567A4").css("color", "black");
             };
         });    
     });
