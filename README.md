@@ -16,4 +16,4 @@ Search a City to see the current weather, and the upcoming 5 day forecast.  Site
 * Bootstrap [https://getbootstrap.com/]
 * Header Background Image [https://static.sciencelearn.org.nz/images/images/000/003/176/embed/FIR_ITV_RuralFireRisk_Weather_CloudySky_123RF_901534.jpg?1522314128]
 
-![image]
+![image](https://github.com/CHaskin91/Weather-Forecaster/blob/main/assets/images/screenshot.PNG)
