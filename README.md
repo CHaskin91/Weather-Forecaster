@@ -2,8 +2,8 @@
 Search a City to see the current weather, and the upcoming 5 day forecast.  Site uses localStorage to store your recent searches.  Powered by dynamically updated HTML, CSS, and Third-Party APIs
 
 ## Links
-* GitHub Repo [https://github.com/CHaskin91/Weather-Radar]
-* Live URL [https://chaskin91.github.io/Weather-Radar/]
+* GitHub Repo [https://github.com/CHaskin91/Weather-Forecaster]
+* Live URL [https://chaskin91.github.io/Weather-Forecaster/]
 
 ## Installation
 1. Download or clone the repository.
